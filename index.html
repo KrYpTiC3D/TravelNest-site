@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TravelNest helps you explore destinations, plan trips and track your travel inspiration in one place.">
+    <meta name="theme-color" content="##34508F">
+    <title>TravelNest - Plan trips and explore destinations</title>
+
+    <link rel="icon" type="images/svg+xml" href="assets/icons/favicon.svg">
+    <link rel="icon" type="images/png" href="assets/icons/icon-192.png">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <!--header-->
+    <header class="site-header">
+        <nav class="nav container" aria-label="Primary">
+
+            <a class="brand" href="index.html">Travel<span>Nest</span></a>
+
+            <!--The animated hamburger button-->
+            <button class="nav-toggle" aria-label="Toggle navigation menu"
+                    aria-controls="nav-links" aria-expanded="false">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+
+            <!--The nav bar with the navigation links-->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explorer.html">Explorer</a></li>
+                <li><a href="budget.html">Budget</a></li>
+                <li><a href="generator.html">Generator</a></li>
+                <li><a href="mood.html">Mood</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <!--main content-->
+    <main id="main" class="section container">
+        <!--HERO: two-column CSS Grid-->
+        <section class="hero container">
+            <div class="hero-grid">
+                <!--Left Column with heading, rotating quote and -->
+                <div class="reveal">
+                    <h1>Plan less, explore more.</h1>
+                    <p class="lead">Discover destinations, build trip budgets and keep every place you love in one calm, organised home.</p>
+                    <p class="hero-quote" id="hero-quote" aria-live="polite"></p>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary" href="explorer.html">Explore destinations</button>
+                        <button class="btn btn-outline" href="generator.html">Surprise me</button>
+                    </div>
+                </div>
+                <!--Right Column with the image-->
+                <div class="card-img hero-img reveal">
+                    <img class="img" src="assets/images/hero-image.jpg" alt="A plane wing seen through a window.">
+                </div>
+            </div>
+        </section>
+
+        <section class="section container">
+            <h2 class="page-intro">Destination of the day</h2>
+            <div class="dotd reveal" id="dotd-content">
+                <div class="loader" role="status" aria-label="Loading destination"></div>
+            </div>
+        </section>
+    </main>
+
+    <!--Footer-->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a class="brand" href="index.html" id="footer-logo">Travel<span>Nest</span><a>
+                    <p>Plan trips, track itineraries and keep every destination you love in one place</p>
+                </div>
+                <div>
+                    <h3>Explore</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="explorer.html">Destination Explorer</a></li>
+                        <li><a href="budget.html">Trip Budget Planner</a></li>
+                        <li><a href="generator.html">Random Trip Generator</a></li>\
+                        <li><a href="mood.html">Travel Mood</a></li>
+                        <li><a href="feedback.html">Feedback &amp; Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Newsletter</h3>
+                    <p>Get travel ideas in your inbox.</p>
+                    <form id="newsletter-form" class="newsletter-form" novalidate>
+                        <label for="newsletter-email">Email address</label>
+                        <input id="newsletter-email" type="email" placeholder="you@example.com" required>
+                        <button class="btn btn-primary" type="submit">Join</button>
+                    </form>
+
+                    <p id="newsletter-msg" role="status"></p>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; <span id="year"></span> TravelNest. Built for Software Development (COMP40053) Module.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <scripts src="js/common.js"></scripts>
+    <script src="js/home.js"></script>
+</body>
+</html>
