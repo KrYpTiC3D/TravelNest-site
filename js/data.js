@@ -18,7 +18,7 @@ const DESTINATIONS = [
     ],
     travelTypes: ["cultural", "relaxation"],       // generator tags
     budgetTier: "medium",                          // generator budget filter
-    costs: { budget: 60, mid: 130, luxury: 300 }   // daily USD estimates
+    costs: { budget: 18000, mid: 39000, luxury: 90000 }   // daily LKR estimates
   },
   {
     id: "santorini",
@@ -38,7 +38,7 @@ const DESTINATIONS = [
     ],
     travelTypes: ["relaxation", "cultural"],
     budgetTier: "high",
-    costs: { budget: 80, mid: 180, luxury: 400 }
+    costs: { budget: 24000, mid: 54000, luxury: 120000 }
   },
   {
     id: "queenstown",
@@ -58,7 +58,7 @@ const DESTINATIONS = [
     ],
     travelTypes: ["adventure", "nature"],
     budgetTier: "high",
-    costs: { budget: 70, mid: 160, luxury: 350 }
+    costs: { budget: 21000, mid: 48000, luxury: 105000 }
   },
   {
     id: "marrakech",
@@ -78,7 +78,7 @@ const DESTINATIONS = [
     ],
     travelTypes: ["cultural", "adventure"],
     budgetTier: "low",
-    costs: { budget: 35, mid: 90, luxury: 220 }
+    costs: { budget: 10500, mid: 27000, luxury: 66000 }
   },
   {
     id: "banff",
@@ -98,7 +98,7 @@ const DESTINATIONS = [
     ],
     travelTypes: ["nature", "adventure"],
     budgetTier: "medium",
-    costs: { budget: 65, mid: 140, luxury: 320 }
+    costs: { budget: 19500, mid: 42000, luxury: 96000 }
   },
   {
     id: "rio",
@@ -118,7 +118,7 @@ const DESTINATIONS = [
     ],
     travelTypes: ["adventure", "relaxation"],
     budgetTier: "medium",
-    costs: { budget: 45, mid: 110, luxury: 260 }
+    costs: { budget: 13500, mid: 33000, luxury: 78000 }
   },
   {
     id: "reykjavik",
@@ -138,7 +138,7 @@ const DESTINATIONS = [
     ],
     travelTypes: ["nature", "adventure"],
     budgetTier: "high",
-    costs: { budget: 85, mid: 190, luxury: 410 }
+    costs: { budget: 25500, mid: 57000, luxury: 123000 }
   },
   {
     id: "hanoi",
@@ -158,7 +158,7 @@ const DESTINATIONS = [
     ],
     travelTypes: ["cultural", "adventure"],
     budgetTier: "low",
-    costs: { budget: 25, mid: 70, luxury: 180 }
+    costs: { budget: 7500, mid: 21000, luxury: 54000 }
   },
   {
     id: "capetown",
@@ -178,7 +178,7 @@ const DESTINATIONS = [
     ],
     travelTypes: ["nature", "relaxation"],
     budgetTier: "medium",
-    costs: { budget: 40, mid: 100, luxury: 240 }
+    costs: { budget: 12000, mid: 30000, luxury: 72000 }
   },
   {
     id: "lisbon",
@@ -197,7 +197,7 @@ const DESTINATIONS = [
     ],
     travelTypes: ["cultural", "relaxation"],
     budgetTier: "low",
-    costs: { budget: 45, mid: 105, luxury: 250 }
+    costs: { budget: 13500, mid: 31500, luxury: 75000 }
   },
   {
     id: "sydney",                                   // unique key for this entry
@@ -217,7 +217,7 @@ const DESTINATIONS = [
     ],
     travelTypes: ["relaxation", "nature"],
     budgetTier: "high",
-    costs: { budget: 75, mid: 165, luxury: 360 }
+    costs: { budget: 19000, mid: 38000, luxury: 102000 }
   },
   {
     id: "cusco",
@@ -237,7 +237,7 @@ const DESTINATIONS = [
     ],
     travelTypes: ["adventure", "cultural"],
     budgetTier: "low",
-    costs: { budget: 35, mid: 85, luxury: 210 }
+    costs: { budget: 10500, mid: 25500, luxury: 63000 }
   }
 ];
 

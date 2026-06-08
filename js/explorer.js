@@ -52,12 +52,13 @@ function openModal(id) {
 
     const attractions = dest.attractions.map(function (a) { return "<li>" + a + "</li>"}).join("");
 
-    modalBody.innerHTML = 
-    '<div class="modal-img" aria-hidden="true" ><img src="' + dest.image + '" alt="' +
-    dest.name + '" > <p class="card-region">' + dest.country + ' &middot; ' + dest.continent + '</p>' +
-    '<p>' + dest.description + '</p>' + '<h4>Popular attractions</h4>' +
+    modalBody.innerHTML =
+    '<div class="modal-img" aria-hidden="true"><img src="' + dest.image + '" alt="' + dest.name + '"></div>' +
+    '<p class="card-region">' + dest.country + ' &middot; ' + dest.continent + '</p>' +
+    '<p>' + dest.description + '</p>' +
+    '<h3>Popular attractions</h3>' +
     '<ul>' + attractions + '</ul>' +
-    '<h4>Travel cost comparison (per day)</h4>' +
+    '<h3>Travel cost comparison (per day)</h3>' +
     '<table class="cost-table">' +
         '<thead><tr><th>Style</th><th>Estimated daily cost</th></tr></thead>'+
         '<tbody>' +
@@ -65,8 +66,7 @@ function openModal(id) {
             '<tr><td>Mid-range</td><td>LKR ' + dest.costs.mid + '</td></tr>' +
             '<tr><td>Luxury</td><td>LKR ' + dest.costs.luxury + '</td></tr>' +
         '</tbody>' +
-    '</table>' +
-    '</div>';
+    '</table>';
 
     document.querySelector("#modal-title").textContent = dest.name;
     modal.classList.remove("hidden");
