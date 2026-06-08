@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse and filter travel destinations by continent and name, and view attractions and costs.">
+    <meta name="theme-color" content="#34508F">
+    <title>Destination Explorer - TravelNest</title>
+
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <link rel="icon" type="image/png" href="assets/icons/icon-192.png">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <!--Header part-->
+    <header class="site-header">
+        <nav class="nav container" aria-label="Primary">
+            <a class="brand" href="index.html"><img src="assets/icons/logo.svg" alt="TravelNest" class="brand-full"><img src="assets/icons/favicon.svg" alt="TravelNest" class="brand-icon"></a>
+            <button class="nav-toggle" aria-label="Toggle navigation menu"
+                    aria-controls="nav-links" aria-expanded="false">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explorer.html">Explorer</a></li>
+                <li><a href="budget.html">Budget</a></li>
+                <li><a href="generator.html">Generator</a></li>
+                <li><a href="mood.html">Mood</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!--Main Content-->
+    <main id="main" class="section container">
+        <h1 class="page-intro">Destination explorer</h1>
+        <p class="lead page-intro">Filter by continent or search by name, then tap a card to see attractions and cost comparison.</p>
+        <div class="filters">
+            <div>
+                <label for="continent-filter">Filter by continent</label>
+                <select id="continent-filter">
+                    <option value="all">All continents</option>
+                </select>
+            </div>
+            <div>
+                <label for="search-input">Search by name</label> 
+                <input id="search-input" type="search" placeholder="e.g. Kyoto">
+            </div>
+        </div>
+
+        <div class="grid-cards" id="dest-grid" aria-live="polite">
+
+        </div>
+    </main>
+
+    <!--Modal (hidden until a card is clicked)-->
+    <div class="modal hidden" id="dest-modal" role="dialog" aria-live="polite" aria-labelledby="modal-title">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h2 id="modal-title">Destination</h2>
+                <button class="modal-close" id="modal-close" aria-label="Close dialog">&times;</button>
+            </div>
+
+            <div class="modal-body" id="modal-body"></div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" id="footer-logo"><img src="assets/icons/logo-light.svg" alt="TravelNest" height="32" class="brand-logo"></a>
+                    <p>Plan trips, track itineraries and keep every destination you love in one place.</p>
+                </div>
+                <div>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="explorer.html">Destination Explorer</a></li>
+                        <li><a href="budget.html">Trip Budget Planner</a></li>
+                        <li><a href="generator.html">Random Trip Generator</a></li>
+                        <li><a href="mood.html">Travel Mood</a></li>
+                        <li><a href="feedback.html">Feedback &amp; Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Newsletter</h3>
+                    <p>Get travel ideas in your inbox</p>
+                    <form id="newsletter-form" class="newsletter-form" novalidate>
+                        <label for="newsletter-email">Email address</label>
+                        <input id="newsletter-email" type="email" placeholder="you@example.com" required>
+                        <button class="btn btn-primary" type="submit">Join</button>
+                    </form>
+                    <p id="newsletter-msg" role="status"></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> TravelNest. Built for Software Development (COMP40053) Module.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--Scripts-->
+    <script src="js/data.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/explorer.js"></script>
+    
+</body>
+</html>

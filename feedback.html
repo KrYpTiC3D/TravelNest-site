@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Send feedback to TravelNest through a validated contact form and read answers to frequently asked questions.">
+    <meta name="theme-color" content="#34508F">
+    <title>Feedback &amp; Support - TravelNest</title>
+
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <link rel="icon" type="image/png" href="assets/icons/icon-192.png">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <!--Header part-->
+    <header class="site-header">
+        <nav class="nav container" aria-label="Primary">
+            <a class="brand" href="index.html"><img src="assets/icons/logo.svg" alt="TravelNest" class="brand-full"><img src="assets/icons/favicon.svg" alt="TravelNest" class="brand-icon"></a>
+            <button class="nav-toggle" aria-label="Toggle navigation menu"
+                    aria-controls="nav-links" aria-expanded="false">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explorer.html">Explorer</a></li>
+                <li><a href="budget.html">Budget</a></li>
+                <li><a href="generator.html">Generator</a></li>
+                <li><a href="mood.html">Mood</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main" class="section container">
+        <h1 class="page-intro">Feedback &amp; support</h1>
+        <p class="lead page-intro">Have a question or an idea? Send us a message, or check the FAQ below.</p>
+
+        <div class="planner-grid">
+            <form id="feedback-form" class="reveal" novalidate>
+                <div class="field">
+                    <label for="fb-name">Name</label>
+                    <input id="fb-name" type="text" placeholder="Your name">
+                    <p class="error-text" id="fb-name-error" role="alert"></p>
+                </div>
+                <div>
+                    <label for="fb-email">Email address</label>
+                    <input id="fb-email" type="email" placeholder="you@example.com">
+                    <p class="error-text" id="fb-email-error" role="alert"></p>
+                </div>
+                <div>
+                    <label for="fb-message">Message</label>
+                    <textarea id="fb-message" placeholder="How can we help?"></textarea>
+                    <p class="error-text" id="fb-message-error" role="alert"></p>
+                </div>
+            
+                <button class="btn btn-primary" type="submit">Send message</button>
+                <p class="confirmation hidden" id="fb-confirm" role="status"></p>
+            </form>
+            
+            <div class="reveal">
+                <h2 class="page-intro">Frequently asked questions</h2>
+                
+                <div class="accordion-item">
+                    <button class="accordion-trigger" aria-expanded="false">
+                        Is TravelNest free to use?
+                        <span class="chev" aria-hidden="true">&#9662;</span>
+                    </button>
+                    <div class="accordion-panel">
+                        <p>Yes. TravelNest is a free planning tool — explore destinations, build budgets and save your wishlist at no cost.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-trigger" aria-expanded="false">
+                        Where is my saved data stored?
+                        <span class="chev" aria-hidden="true">&#9662;</span>
+                    </button>
+                    <div class="accordion-panel">
+                        <p>Everythin you save — budgets, wishlist and visited places — is stored locally in your own browser using localStorage.
+                            Nothing is sent to a server.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-trigger" aria-expanded="false">
+                        Can I use TravelNest offline?
+                        <span class="chev" aria-hidden="true">&#9662;</span>
+                    </button>
+                    <div class="accordion-panel">
+                        <p>Yes. TravelNest is a Progressive Web App, so once you have opened it, the core pages are cached
+                        and continue to work offline.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-trigger" aria-expanded="false">
+                        How is the daily budget classified?
+                        <span class="chev" aria-hidden="true">&#9662;</span>
+                    </button>
+                    <div class="accordion-panel">
+                        <p>A daily budget under LKR 10,000 is "low", LKR 20,000–40,000 is "moderate", and LKR 40,000 or more is "luxury".
+                        These thresholds are a rough guide only.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+        <!--Footer-->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" id="footer-logo"><img src="assets/icons/logo-light.svg" alt="TravelNest" height="32" class="brand-logo"></a>
+                    <p>Plan trips, track itineraries and keep every destination you love in one place.</p>
+                </div>
+                <div>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="explorer.html">Destination Explorer</a></li>
+                        <li><a href="budget.html">Trip Budget Planner</a></li>
+                        <li><a href="generator.html">Random Trip Generator</a></li>
+                        <li><a href="mood.html">Travel Mood</a></li>
+                        <li><a href="feedback.html">Feedback &amp; Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Newsletter</h3>
+                    <p>Get travel ideas in your inbox</p>
+                    <form id="newsletter-form" class="newsletter-form" novalidate>
+                        <label for="newsletter-email">Email address</label>
+                        <input id="newsletter-email" type="email" placeholder="you@example.com" required>
+                        <button class="btn btn-primary" type="submit">Join</button>
+                    </form>
+                    <p id="newsletter-msg" role="status"></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> TravelNest. Built for Software Development (COMP40053) Module.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--Scripts-->
+    <script src="js/data.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/feedback.js"></script>
+
+</body>
+</html>

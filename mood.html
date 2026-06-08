@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Set the mood with ambient travel sounds and track which destinations you have visited or are planning.">
+    <meta name="theme-color" content="#34508F">
+    <title>Travel Mood - TravelNest</title>
+
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <link rel="icon" type="image/png" href="assets/icons/icon-192.png">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <!--Header-->
+    <header class="site-header">
+        <nav class="nav container" aria-label="Primary">
+            <a class="brand" href="index.html"><img src="assets/icons/logo.svg" alt="TravelNest" class="brand-full"><img src="assets/icons/favicon.svg" alt="TravelNest" class="brand-icon"></a>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-controls="nav-links" aria-expanded="false">
+                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explorer.html">Explorer</a></li>
+                <li><a href="budget.html">Budget</a></li>
+                <li><a href="generator.html">Generator</a></li>
+                <li><a href="mood.html">Mood</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Main Content-->
+    <main id="main" class="section container">
+        <h1 class="page-intro">Travel mood</h1>
+        <p class="lead page-intro">Play an ambient soundscape, the mark the places you have visited or are planning to visit.</p>
+
+        <!--Ambient Sound section-->
+        <h2 class="page-intro">Ambient sounds</h2>
+        <div class="sound-grid">
+            <button class="sound-toggle" data-sound="beach" aria-pressed="false">
+                <span aria-hidden="true">&#127958;</span> Beach
+            </button>
+
+            <button class="sound-toggle" data-sound="forest" aria-pressed="false">
+                <span aria-hidden="true">&#127794;</span> Forest
+            </button>
+
+            <button class="sound-toggle" data-sound="city" aria-pressed="false">
+                <span aria-hidden="true">&#127961;</span> City
+            </button>
+        </div>
+
+        <!--Visited place tracker section-->
+        <h2 class="page-intro">My destinations</h2>
+        <ul class="mood-list" id="mood-list" aria-live="polite"></ul>
+    </main>    
+
+        <!--Footer-->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" id="footer-logo"><img src="assets/icons/logo-light.svg" alt="TravelNest" height="32" class="brand-logo"></a>
+                    <p>Plan trips, track itineraries and keep every destination you love in one place.</p>
+                </div>
+                <div>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="explorer.html">Destination Explorer</a></li>
+                        <li><a href="budget.html">Trip Budget Planner</a></li>
+                        <li><a href="generator.html">Random Trip Generator</a></li>
+                        <li><a href="mood.html">Travel Mood</a></li>
+                        <li><a href="feedback.html">Feedback &amp; Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Newsletter</h3>
+                    <p>Get travel ideas in your inbox</p>
+                    <form id="newsletter-form" class="newsletter-form" novalidate>
+                        <label for="newsletter-email">Email address</label>
+                        <input id="newsletter-email" type="email" placeholder="you@example.com" required>
+                        <button class="btn btn-primary" type="submit">Join</button>
+                    </form>
+                    <p id="newsletter-msg" role="status"></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> TravelNest. Built for Software Development (COMP40053) Module.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--Scripts-->
+    <script src="js/data.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/mood.js"></script>
+    
+</body>
+</html>

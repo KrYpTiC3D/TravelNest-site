@@ -1,0 +1,252 @@
+/* "const" because the dataset itself never gets reassigned at runtime.       */
+const DESTINATIONS = [
+  {
+    id: "kyoto",                                   // unique key for this entry
+    name: "Kyoto",                                 // display name
+    country: "Japan",                              // country label
+    continent: "Asia",                             // used by continent filter
+    image: "assets/images/Kyoto.jpg",                                     // intentionally empty
+    description:
+      "Japan's former imperial capital, Kyoto blends serene temples, " +
+      "traditional tea houses and quiet bamboo groves with a calm, " +
+      "unhurried pace that makes it perfect for slow travel.",
+    attractions: [                                 // list shown in the modal
+      "Fushimi Inari shrine and its torii gates",
+      "Arashiyama bamboo grove",
+      "Kinkaku-ji (the Golden Pavilion)",
+      "Gion historic geisha district"
+    ],
+    travelTypes: ["cultural", "relaxation"],       // generator tags
+    budgetTier: "medium",                          // generator budget filter
+    costs: { budget: 60, mid: 130, luxury: 300 }   // daily USD estimates
+  },
+  {
+    id: "santorini",
+    name: "Santorini",
+    country: "Greece",
+    continent: "Europe",
+    image: "assets/images/Santorini.jpg",
+    description:
+      "Whitewashed villages cling to volcanic cliffs above a deep blue " +
+      "caldera. Santorini is famous for its sunsets, black-sand beaches " +
+      "and relaxed island rhythm.",
+    attractions: [
+      "Oia sunset viewpoint",
+      "Red Beach near Akrotiri",
+      "Ancient Thera ruins",
+      "Caldera boat cruise"
+    ],
+    travelTypes: ["relaxation", "cultural"],
+    budgetTier: "high",
+    costs: { budget: 80, mid: 180, luxury: 400 }
+  },
+  {
+    id: "queenstown",
+    name: "Queenstown",
+    country: "New Zealand",
+    continent: "Oceania",
+    image: "assets/images/Queenstown.jpg",
+    description:
+      "Ringed by mountains and set on a glacial lake, Queenstown is the " +
+      "adventure capital of the southern hemisphere — bungee jumping, " +
+      "skiing and hiking are all on the doorstep.",
+    attractions: [
+      "Skyline Gondola and luge",
+      "Bungee jump at Kawarau Bridge",
+      "Lake Wakatipu cruises",
+      "Day trip to Milford Sound"
+    ],
+    travelTypes: ["adventure", "nature"],
+    budgetTier: "high",
+    costs: { budget: 70, mid: 160, luxury: 350 }
+  },
+  {
+    id: "marrakech",
+    name: "Marrakech",
+    country: "Morocco",
+    continent: "Africa",
+    image: "assets/images/Marrakech.jpg",
+    description:
+      "A sensory feast of spice markets, palaces and hidden riads. " +
+      "Marrakech rewards curious travellers with colour, craft and " +
+      "centuries of history at every turn.",
+    attractions: [
+      "Jemaa el-Fnaa main square",
+      "Bahia Palace",
+      "Majorelle Garden",
+      "The souks of the medina"
+    ],
+    travelTypes: ["cultural", "adventure"],
+    budgetTier: "low",
+    costs: { budget: 35, mid: 90, luxury: 220 }
+  },
+  {
+    id: "banff",
+    name: "Banff",
+    country: "Canada",
+    continent: "North America",
+    image: "assets/images/Banff.jpg",
+    description:
+      "Turquoise lakes, glaciers and pine forests sit inside Canada's " +
+      "oldest national park. Banff is built for nature lovers in every " +
+      "season of the year.",
+    attractions: [
+      "Lake Louise",
+      "Moraine Lake",
+      "Banff Gondola to Sulphur Mountain",
+      "Johnston Canyon hike"
+    ],
+    travelTypes: ["nature", "adventure"],
+    budgetTier: "medium",
+    costs: { budget: 65, mid: 140, luxury: 320 }
+  },
+  {
+    id: "rio",
+    name: "Rio de Janeiro",
+    country: "Brazil",
+    continent: "South America",
+    image: "assets/images/Rio De Janeiro.jpg",
+    description:
+      "Mountains tumble straight into the sea in Rio, where famous " +
+      "beaches, samba rhythms and viewpoints make for an energetic, " +
+      "sun-soaked escape.",
+    attractions: [
+      "Christ the Redeemer statue",
+      "Sugarloaf Mountain cable car",
+      "Copacabana and Ipanema beaches",
+      "Tijuca rainforest trails"
+    ],
+    travelTypes: ["adventure", "relaxation"],
+    budgetTier: "medium",
+    costs: { budget: 45, mid: 110, luxury: 260 }
+  },
+  {
+    id: "reykjavik",
+    name: "Reykjavik",
+    country: "Iceland",
+    continent: "Europe",
+    image: "assets/images/Reykjavik.jpg",
+    description:
+      "A compact, walkable capital that is the gateway to volcanoes, " +
+      "waterfalls and the northern lights. Iceland is raw nature at its " +
+      "most dramatic.",
+    attractions: [
+      "Blue Lagoon geothermal spa",
+      "Golden Circle route",
+      "Northern lights tours",
+      "Hallgrimskirkja church viewpoint"
+    ],
+    travelTypes: ["nature", "adventure"],
+    budgetTier: "high",
+    costs: { budget: 85, mid: 190, luxury: 410 }
+  },
+  {
+    id: "hanoi",
+    name: "Hanoi",
+    country: "Vietnam",
+    continent: "Asia",
+    image: "assets/images/Hanoi.jpg",
+    description:
+      "Hanoi pairs a frantic, charming old quarter with tranquil lakes " +
+      "and some of the best street food in the world — all at a price " +
+      "that is kind to a student budget.",
+    attractions: [
+      "Hoan Kiem Lake",
+      "Old Quarter street food tour",
+      "Temple of Literature",
+      "Day trip to Halong Bay"
+    ],
+    travelTypes: ["cultural", "adventure"],
+    budgetTier: "low",
+    costs: { budget: 25, mid: 70, luxury: 180 }
+  },
+  {
+    id: "capetown",
+    name: "Cape Town",
+    country: "South Africa",
+    continent: "Africa",
+    image: "assets/images/Cape Town.jpg",
+    description:
+      "Wedged between Table Mountain and two oceans, Cape Town offers " +
+      "beaches, vineyards and wildlife within a short drive of a lively " +
+      "modern city.",
+    attractions: [
+      "Table Mountain cableway",
+      "Cape of Good Hope",
+      "Boulders Beach penguins",
+      "Constantia wine route"
+    ],
+    travelTypes: ["nature", "relaxation"],
+    budgetTier: "medium",
+    costs: { budget: 40, mid: 100, luxury: 240 }
+  },
+  {
+    id: "lisbon",
+    name: "Lisbon",
+    country: "Portugal",
+    continent: "Europe",
+    image: "assets/images/Lisbon.jpg",
+    description:
+      "Pastel buildings, rattling trams and tiled facades cover Lisbon's " +
+      "seven hills. It is sunny, affordable and endlessly photogenic.",
+    attractions: [
+      "Tram 28 through Alfama",
+      "Belem Tower",
+      "Time Out food market",
+      "Sintra day trip"
+    ],
+    travelTypes: ["cultural", "relaxation"],
+    budgetTier: "low",
+    costs: { budget: 45, mid: 105, luxury: 250 }
+  },
+  {
+    id: "sydney",                                   // unique key for this entry
+    name: "Sydney",
+    country: "Australia",
+    continent: "Oceania",
+    image: "assets/images/Sydney.jpg",
+    description:
+      "Sydney wraps a glittering harbour with golden beaches and a " +
+      "buzzing food scene, making it an easy, relaxed introduction to " +
+      "Australia.",
+    attractions: [
+      "Sydney Opera House",
+      "Bondi to Coogee coastal walk",
+      "Harbour Bridge climb",
+      "Taronga Zoo ferry"
+    ],
+    travelTypes: ["relaxation", "nature"],
+    budgetTier: "high",
+    costs: { budget: 75, mid: 165, luxury: 360 }
+  },
+  {
+    id: "cusco",
+    name: "Cusco",
+    country: "Peru",
+    continent: "South America",
+    image: "assets/images/Cusco.jpg",
+    description:
+      "The historic gateway to Machu Picchu, Cusco mixes Inca stonework " +
+      "with colonial squares high in the Andes — a dream for cultural " +
+      "and adventurous travellers alike.",
+    attractions: [
+      "Machu Picchu",
+      "Sacred Valley",
+      "San Pedro Market",
+      "Rainbow Mountain trek"
+    ],
+    travelTypes: ["adventure", "cultural"],
+    budgetTier: "low",
+    costs: { budget: 35, mid: 85, luxury: 210 }
+  }
+];
+
+/* The travel quotes used by the Home page hero rotator live here too, so all
+   site "content data" stays together in one file.                            */
+const TRAVEL_QUOTES = [
+  "The world is a book, and those who do not travel read only one page.",
+  "Travel far enough, you meet yourself.",
+  "To travel is to live.",
+  "Adventure is worthwhile in itself.",
+  "Once a year, go somewhere you have never been before."
+];
