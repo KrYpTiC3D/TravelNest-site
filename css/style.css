@@ -384,7 +384,6 @@ input.invalid, textarea.invalid {
     aspect-ratio: 16 / 9;
     background: #fff;
     border-radius: var(--radius-sm);
-    overflow: hidden;
     display: grid;
     place-items: center;
     color: var(--muted);
