@@ -384,6 +384,7 @@ input.invalid, textarea.invalid {
     aspect-ratio: 16 / 9;
     background: #fff;
     border-radius: var(--radius-sm);
+    overflow: hidden;
     display: grid;
     place-items: center;
     color: var(--muted);
@@ -528,6 +529,7 @@ input.invalid, textarea.invalid {
     grid-template-columns: 1fr;
     gap: var(--space-lg);
     align-items: center;
+    border-radius: var(--radius-sm);
 }
 .hero-quote {
     font-family: var(--font-heading);
@@ -539,6 +541,8 @@ input.invalid, textarea.invalid {
 }
 .hero-img {
     aspect-ratio: 4 / 3;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
 }
 .hero-actions {
     display: flex;
@@ -558,7 +562,7 @@ input.invalid, textarea.invalid {
     align-items: center;
 }
 
-.dotd .card-img { border-radius: var(--radius-sm); }
+.dotd .card-img { border-radius: var(--radius-sm); overflow: hidden; }
 
 
 /*Explorer page*/
