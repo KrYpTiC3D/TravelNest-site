@@ -776,40 +776,37 @@ input.invalid, textarea.invalid {
   .grid-cards { grid-template-columns: repeat(3, 1fr); } /* 3 cards per row     */
 }
 
-/* MOBILE only (<= 760px): collapse the nav into the hamburger menu.          */
+/* MOBILE only (<= 760px): collapse the nav into the hamburger menu.*/
 @media (max-width: 760px) {
-  .nav-toggle { display: flex; }   /* show the hamburger button               */
-  .nav-links {                     /* turn the link row into a drop panel     */
-    position: absolute;            /* float the panel below the header        */
+  .nav-toggle { display: flex; }  
+  .nav-links {                     
+    position: absolute;            
     top: 100%; left: 0; right: 0;
-    flex-direction: column;        /* stack links vertically                  */
+    flex-direction: column;        
     gap: 0;
     background: var(--surface);
     border-bottom: 1px solid var(--border);
     padding: var(--space-sm);
-    transform: translateY(-12px);  /* start slightly raised + hidden          */
+    transform: translateY(-12px);  
     opacity: 0;
-    pointer-events: none;          /* not clickable while hidden              */
+    pointer-events: none;          
     transition: opacity var(--transition), transform var(--transition);
     border: none;
   }
-  .nav-links.open {                /* JS adds .open when the hamburger is hit */
+  .nav-links.open {                
     transform: translateY(0);
     opacity: 1;
-    pointer-events: auto;          /* clickable again                         */
+    pointer-events: auto;          
   }
   .nav-links a {
     padding-block: 0.1rem;
   }
   .nav-links a::after { display: none; }
-  .nav { position: relative; }     /* anchor for the absolutely-placed panel  */
+  .nav { position: relative; }     
   .brand-full { display: none; }
   .brand-icon { display: block; }
 }
 
-/* ---------------------------------------------------------------------------
-   10. ACCESSIBILITY PREFERENCES
---------------------------------------------------------------------------- */
 /* Respect users who ask the OS to reduce motion — turn off animations.       */
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important;
