@@ -9,7 +9,7 @@ function cardHTML(dest) {
         '<article class="card reveal" data-id="' + dest.id +'" ' +
         'tabindex="0" role="button" aria-label="view details for ' +
         dest.name + '">' + '<div class="card-img" aria-hidden="true"><img src="' + dest.image +
-         '" loading="lazy" decoding="async" alt="' + dest.name + '" ></div>' + '<div class="card-body">' +
+         '" loading="lazy" decoding="async" width="640" height="400" alt="' + dest.name + '"></div>' + '<div class="card-body">' +
          '<h3>' + dest.name + '</h3>' + 
          '<p class="card-region" >' + dest.country + ' &middot; ' + dest.continent + '</p>' +
          '</div>' +
@@ -53,7 +53,7 @@ function openModal(id) {
     const attractions = dest.attractions.map(function (a) { return "<li>" + a + "</li>"}).join("");
 
     modalBody.innerHTML =
-    '<div class="modal-img" aria-hidden="true"><img src="' + dest.image + '" alt="' + dest.name + '"></div>' +
+    '<div class="modal-img" aria-hidden="true"><img src="' + dest.image + '" alt="' + dest.name + '" width="640" height="400" loading="lazy" decoding="async"></div>' +
     '<p class="card-region">' + dest.country + ' &middot; ' + dest.continent + '</p>' +
     '<p>' + dest.description + '</p>' +
     '<h3>Popular attractions</h3>' +

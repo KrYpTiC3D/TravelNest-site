@@ -35,7 +35,7 @@ function surpriseMe() {
 
     resultCard.innerHTML = 
         '<div class="card pop">' +
-            '<div class="card-img" aria-hidden="true"><img src="' + pick.image + '" alt="' +
+            '<div class="card-img" aria-hidden="true"><img src="' + pick.image + '" loading="lazy" decoding="async" width="640" height="400" alt="' +
             pick.name + '"></div>' + '<div class="card-body">' +
                 '<h3>' + pick.name + '</h3>' +
                 '<p class="card-region">' + pick.country + ' &middot; ' + pick.continent + '</p>' +

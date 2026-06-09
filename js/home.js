@@ -39,7 +39,7 @@ function initDestinationOfDay() {
     const index = dayOfYear() % DESTINATIONS.length;
     const dest = DESTINATIONS[index];
 
-    box.innerHTML = '<div class="card-img" aria-hidden="true"><img src="'+ dest.image + '" loading="lazy" decoding="async" alt="'
+    box.innerHTML = '<div class="card-img" aria-hidden="true"><img src="'+ dest.image + '" loading="lazy" decoding="async" width="640" height="400" alt="'
     + dest.name + '">' + '</div>' + '<div>' + '<h3>' + dest.name + '</h3>' + '<p class="card-region" >'
     + dest.country + ' &middot; ' + dest.continent + '</p>' + '<p>' + dest.description + '</p>' +
     '<a class="btn btn-outline" href="explorer.html" id="dotd-btn">Explore destinations</a>' + '</div>';
