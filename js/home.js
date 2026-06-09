@@ -42,7 +42,7 @@ function initDestinationOfDay() {
     box.innerHTML = '<div class="card-img" aria-hidden="true"><img src="'+ dest.image + '" alt="'
     + dest.name + '">' + '</div>' + '<div>' + '<h3>' + dest.name + '</h3>' + '<p class="card-region" >'
     + dest.country + ' &middot; ' + dest.continent + '</p>' + '<p>' + dest.description + '</p>' +
-    '<a class="btn btn-outline" href="explorer.html" >Explore destinations</a>' + '</div>';
+    '<a class="btn btn-outline" href="explorer.html" id="dotd-btn">Explore destinations</a>' + '</div>';
 }
 
 /* Initialize both functions */
