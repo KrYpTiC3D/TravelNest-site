@@ -1,4 +1,4 @@
-const CACHE_NAME = "travelnest-v4";
+const CACHE_NAME = "travelnest-v5";
 
 /* The core files that make up the "app shell" — cached on install.          */
 const CORE_ASSETS = [
@@ -18,7 +18,15 @@ const CORE_ASSETS = [
   "./js/generator.js",
   "./js/mood.js",
   "./js/feedback.js",
-  "./manifest.json"
+  "./manifest.json",
+
+  /* from CacheStorage instead of re-downloading.                            */
+  "./fonts/NunitoSans-Regular.woff2",
+  "./fonts/Fraunces-Regular.woff2",
+  "./assets/icons/logo.svg",        // header brand mark (all pages)
+  "./assets/icons/logo-light.svg",  // footer brand mark (all pages)
+  "./assets/icons/favicon.svg",
+  "./assets/images/hero-image.webp" // home-page LCP image
 ];
 
 /* INSTALL — open the cache and store every core asset.                       */
