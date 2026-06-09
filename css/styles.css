@@ -41,7 +41,7 @@ html:focus-within {
 /* Set core body defaults */
 body {
   min-height: 100vh;
-  /* dropped text-rendering: optimizeSpeed — not a valid W3C CSS property */
+  text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
 
@@ -893,14 +893,14 @@ input.invalid, textarea.invalid {
     padding: var(--space-sm);
     transform: translateY(-12px);  
     opacity: 0;
-    visibility: hidden;            /* hide + block clicks when closed (replaces invalid pointer-events) */          
-    transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
+    pointer-events: none;          
+    transition: opacity var(--transition), transform var(--transition);
     border: none;
   }
   .nav-links.open {                
     transform: translateY(0);
     opacity: 1;
-    visibility: visible;           /* show + allow clicks when open */          
+    pointer-events: auto;          
   }
   .nav-links a {
     padding-block: 0.1rem;
