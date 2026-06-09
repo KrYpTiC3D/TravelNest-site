@@ -9,7 +9,7 @@ function cardHTML(dest) {
         '<article class="card reveal" data-id="' + dest.id +'" ' +
         'tabindex="0" role="button" aria-label="view details for ' +
         dest.name + '">' + '<div class="card-img" aria-hidden="true"><img src="' + dest.image +
-         '" alt="' + dest.name + '" ></div>' + '<div class="card-body">' +
+         '" loading="lazy" decoding="async" alt="' + dest.name + '" ></div>' + '<div class="card-body">' +
          '<h3>' + dest.name + '</h3>' + 
          '<p class="card-region" >' + dest.country + ' &middot; ' + dest.continent + '</p>' +
          '</div>' +

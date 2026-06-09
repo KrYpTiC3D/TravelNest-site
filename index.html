@@ -11,7 +11,12 @@
     <link rel="icon" type="image/png" href="assets/icons/icon-192.png">
     <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
     <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
+
+    <!--Preload the LCP hero image and fonts so the browser fetches them early-->
+    <link rel="preload" as="image" href="assets/images/hero-image.webp" fetchpriority="high">
+    <link rel="preload" as="font" type="font/woff2" href="fonts/NunitoSans-Regular.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="fonts/Fraunces-Regular.woff2" crossorigin>
+
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
@@ -58,7 +63,7 @@
                 </div>
                 <!--Right Column with the image-->
                 <div class="card-img hero-img reveal">
-                    <img class="img" src="assets/images/hero-image.jpg" alt="A plane wing seen through a window.">
+                    <img class="img" src="assets/images/hero-image.webp" alt="A plane wing seen through a window." width="1200" height="900" fetchpriority="high">
                 </div>
             </div>
         </section>
@@ -107,8 +112,8 @@
     </footer>
 
     <!--Scripts-->
-    <script src="js/data.js"></script>
-    <script src="js/common.js"></script>
-    <script src="js/home.js"></script>
+    <script src="js/data.js" defer></script>
+    <script src="js/common.js" defer></script>
+    <script src="js/home.js" defer></script>
 </body>
 </html>

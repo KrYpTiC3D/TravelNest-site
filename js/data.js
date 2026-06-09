@@ -5,7 +5,7 @@ const DESTINATIONS = [
     name: "Kyoto",                                 // display name
     country: "Japan",                              // country label
     continent: "Asia",                             // used by continent filter
-    image: "assets/images/Kyoto.jpg",                                     // intentionally empty
+    image: "assets/images/Kyoto.webp",                                     // intentionally empty
     description:
       "Japan's former imperial capital, Kyoto blends serene temples, " +
       "traditional tea houses and quiet bamboo groves with a calm, " +
@@ -25,7 +25,7 @@ const DESTINATIONS = [
     name: "Santorini",
     country: "Greece",
     continent: "Europe",
-    image: "assets/images/Santorini.jpg",
+    image: "assets/images/Santorini.webp",
     description:
       "Whitewashed villages cling to volcanic cliffs above a deep blue " +
       "caldera. Santorini is famous for its sunsets, black-sand beaches " +
@@ -45,7 +45,7 @@ const DESTINATIONS = [
     name: "Queenstown",
     country: "New Zealand",
     continent: "Oceania",
-    image: "assets/images/Queenstown.jpg",
+    image: "assets/images/Queenstown.webp",
     description:
       "Ringed by mountains and set on a glacial lake, Queenstown is the " +
       "adventure capital of the southern hemisphere — bungee jumping, " +
@@ -65,7 +65,7 @@ const DESTINATIONS = [
     name: "Marrakech",
     country: "Morocco",
     continent: "Africa",
-    image: "assets/images/Marrakech.jpg",
+    image: "assets/images/Marrakech.webp",
     description:
       "A sensory feast of spice markets, palaces and hidden riads. " +
       "Marrakech rewards curious travellers with colour, craft and " +
@@ -85,7 +85,7 @@ const DESTINATIONS = [
     name: "Banff",
     country: "Canada",
     continent: "North America",
-    image: "assets/images/Banff.jpg",
+    image: "assets/images/Banff.webp",
     description:
       "Turquoise lakes, glaciers and pine forests sit inside Canada's " +
       "oldest national park. Banff is built for nature lovers in every " +
@@ -105,7 +105,7 @@ const DESTINATIONS = [
     name: "Rio de Janeiro",
     country: "Brazil",
     continent: "South America",
-    image: "assets/images/Rio De Janeiro.jpg",
+    image: "assets/images/Rio De Janeiro.webp",
     description:
       "Mountains tumble straight into the sea in Rio, where famous " +
       "beaches, samba rhythms and viewpoints make for an energetic, " +
@@ -125,7 +125,7 @@ const DESTINATIONS = [
     name: "Reykjavik",
     country: "Iceland",
     continent: "Europe",
-    image: "assets/images/Reykjavik.jpg",
+    image: "assets/images/Reykjavik.webp",
     description:
       "A compact, walkable capital that is the gateway to volcanoes, " +
       "waterfalls and the northern lights. Iceland is raw nature at its " +
@@ -145,7 +145,7 @@ const DESTINATIONS = [
     name: "Hanoi",
     country: "Vietnam",
     continent: "Asia",
-    image: "assets/images/Hanoi.jpg",
+    image: "assets/images/Hanoi.webp",
     description:
       "Hanoi pairs a frantic, charming old quarter with tranquil lakes " +
       "and some of the best street food in the world — all at a price " +
@@ -165,7 +165,7 @@ const DESTINATIONS = [
     name: "Cape Town",
     country: "South Africa",
     continent: "Africa",
-    image: "assets/images/Cape Town.jpg",
+    image: "assets/images/Cape Town.webp",
     description:
       "Wedged between Table Mountain and two oceans, Cape Town offers " +
       "beaches, vineyards and wildlife within a short drive of a lively " +
@@ -185,7 +185,7 @@ const DESTINATIONS = [
     name: "Lisbon",
     country: "Portugal",
     continent: "Europe",
-    image: "assets/images/Lisbon.jpg",
+    image: "assets/images/Lisbon.webp",
     description:
       "Pastel buildings, rattling trams and tiled facades cover Lisbon's " +
       "seven hills. It is sunny, affordable and endlessly photogenic.",
@@ -204,7 +204,7 @@ const DESTINATIONS = [
     name: "Sydney",
     country: "Australia",
     continent: "Oceania",
-    image: "assets/images/Sydney.jpg",
+    image: "assets/images/Sydney.webp",
     description:
       "Sydney wraps a glittering harbour with golden beaches and a " +
       "buzzing food scene, making it an easy, relaxed introduction to " +
@@ -224,7 +224,7 @@ const DESTINATIONS = [
     name: "Cusco",
     country: "Peru",
     continent: "South America",
-    image: "assets/images/Cusco.jpg",
+    image: "assets/images/Cusco.webp",
     description:
       "The historic gateway to Machu Picchu, Cusco mixes Inca stonework " +
       "with colonial squares high in the Andes — a dream for cultural " +

@@ -1,4 +1,4 @@
-const CACHE_NAME = "travelnest-v3";
+const CACHE_NAME = "travelnest-v4";
 
 /* The core files that make up the "app shell" — cached on install.          */
 const CORE_ASSETS = [

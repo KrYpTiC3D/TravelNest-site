@@ -11,7 +11,10 @@
     <link rel="icon" type="image/png" href="assets/icons/icon-192.png">
     <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
     <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <!--Preload fonts so headings/body text render without a flash-->
+    <link rel="preload" as="font" type="font/woff2" href="fonts/NunitoSans-Regular.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="fonts/Fraunces-Regular.woff2" crossorigin>
+
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 
@@ -110,9 +113,9 @@
 
 
     <!--Scripts-->
-    <script src="js/data.js"></script>
-    <script src="js/common.js"></script>
-    <script src="js/generator.js"></script>
+    <script src="js/data.js" defer></script>
+    <script src="js/common.js" defer></script>
+    <script src="js/generator.js" defer></script>
     
 </body>
 </html>
