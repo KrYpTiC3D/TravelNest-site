@@ -911,12 +911,12 @@ input.invalid, textarea.invalid {
   .brand-icon { display: block; }
 }
 
-/* Respect users who ask the OS to reduce motion — turn off animations.       */
+/* Respect users who ask the OS to reduce motion — turn off animations.*/
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important;
       scroll-behavior: auto !important; }
 }
-/* Clear, visible focus ring for keyboard users on interactive elements.      */
+/* Clear, visible focus ring for keyboard users on interactive elements.*/
 a:focus-visible, button:focus-visible,
 input:focus-visible, select:focus-visible, textarea:focus-visible {
   outline: 3px solid var(--accent);
