@@ -20,13 +20,13 @@ const CORE_ASSETS = [
   "./js/feedback.js",
   "./manifest.json",
 
-  /* from CacheStorage instead of re-downloading.                            */
+  /* Fonts, logos and the hero image — cached so repeat visits load fast.      */
   "./fonts/NunitoSans-Regular.woff2",
   "./fonts/Fraunces-Regular.woff2",
-  "./assets/icons/logo.svg",        // header brand mark (all pages)
-  "./assets/icons/logo-light.svg",  // footer brand mark (all pages)
+  "./assets/icons/logo.svg",
+  "./assets/icons/logo-light.svg",
   "./assets/icons/favicon.svg",
-  "./assets/images/hero-image.webp" // home-page LCP image
+  "./assets/images/hero-image.webp"
 ];
 
 /* INSTALL — open the cache and store every core asset.                       */
