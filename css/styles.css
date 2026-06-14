@@ -906,9 +906,12 @@ input.invalid, textarea.invalid {
     padding-block: 0.1rem;
   }
   .nav-links a::after { display: none; }
-  .nav { position: relative; }     
+  .nav { position: relative; }
   .brand-full { display: none; }
   .brand-icon { display: block; }
+
+  .mood-item { flex-direction: column; align-items: stretch; }
+  .chip-group { justify-content: flex-end; }
 }
 
 /* Respect users who ask the OS to reduce motion — turn off animations.*/
