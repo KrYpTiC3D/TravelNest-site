@@ -20,7 +20,7 @@ const CORE_ASSETS = [
   "./js/feedback.js",
   "./manifest.json",
 
-  /* Fonts, logos and the hero image — cached so repeat visits load fast.      */
+  /* Fonts, logos and the hero image — cached so repeat visits load fast. */
   "./fonts/NunitoSans-Regular.woff2",
   "./fonts/Fraunces-Regular.woff2",
   "./assets/icons/logo.svg",
@@ -29,9 +29,9 @@ const CORE_ASSETS = [
   "./assets/images/hero-image.webp"
 ];
 
-/* INSTALL — open the cache and store every core asset.                       */
+/* INSTALL — open the cache and store every core asset. */
 self.addEventListener("install", function (event) {
-  /* waitUntil keeps the worker alive until the caching promise resolves.     */
+  /* waitUntil keeps the worker alive until the caching promise resolves.*/
   event.waitUntil(
     caches.open(CACHE_NAME).then(function (cache) {
       return cache.addAll(CORE_ASSETS);   // fetch + store all core files
@@ -40,13 +40,13 @@ self.addEventListener("install", function (event) {
   self.skipWaiting();                      // activate this worker immediately
 });
 
-/* ACTIVATE — delete any old caches from previous versions.                   */
+/* ACTIVATE — delete any old caches from previous versions.*/
 self.addEventListener("activate", function (event) {
   event.waitUntil(
     caches.keys().then(function (keys) {
       return Promise.all(
         keys.map(function (key) {
-          /* Remove caches that are not the current version.                 */
+          /* Remove caches that are not the current version. */
           if (key !== CACHE_NAME) return caches.delete(key);
         })
       );
@@ -55,9 +55,9 @@ self.addEventListener("activate", function (event) {
   self.clients.claim();                    // take control of open pages
 });
 
-/* FETCH — respond from cache first, then fall back to the network.           */
+/* FETCH — respond from cache first, then fall back to the network. */
 self.addEventListener("fetch", function (event) {
-  /* Only handle GET requests (we never cache form posts, etc.).             */
+  /* Only handle GET requests (we never cache form posts, etc.). */
   if (event.request.method !== "GET") return;
 
   event.respondWith(
@@ -66,14 +66,14 @@ self.addEventListener("fetch", function (event) {
       return cached || fetch(event.request).then(function (response) {
         /* Optionally cache newly fetched files (e.g. images) for next time. */
         return caches.open(CACHE_NAME).then(function (cache) {
-          /* Only cache successful, same-origin responses.                   */
+          /* Only cache successful, same-origin responses.*/
           if (response.ok && event.request.url.startsWith(self.location.origin)) {
             cache.put(event.request, response.clone());
           }
           return response;                 // hand the response to the page
         });
       }).catch(function () {
-        /* Network failed and nothing cached — fall back to the home page.   */
+        /* Network failed and nothing cached — fall back to the home page.*/
         return caches.match("./index.html");
       });
     })
