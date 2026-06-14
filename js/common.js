@@ -73,16 +73,16 @@ function initScrollReveal() {
     const items = document.querySelectorAll(".reveal");
     if (!items.length) return;
 
-    const obeserver = new IntersectionObserver(function (entries) {
+    const observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
             if (entry.isIntersecting) {
                 entry.target.classList.add("visible");
-                obeserver.unobserve(entry.target);
+                observer.unobserve(entry.target);
             }
         });
     }, {threshold: 0.15 });
 
-    items.forEach(function (item) { obeserver.observe(item); });
+    items.forEach(function (item) { observer.observe(item); });
 }
 
 /*Validates the email and stores it in localStorage*/
@@ -98,7 +98,7 @@ function initNewsletter() {
 
         if (!isValidEmail(email)) {
             note.textContent = "Please enter a valid email address.";
-            note.computedStyleMap.color = "var(--danger)";
+            note.style.color = "var(--danger)";
             return;
         }
 

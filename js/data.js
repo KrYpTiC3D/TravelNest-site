@@ -1,24 +1,24 @@
 /* "const" because the dataset itself never gets reassigned at runtime.       */
 const DESTINATIONS = [
   {
-    id: "kyoto",                                   // unique key for this entry
-    name: "Kyoto",                                 // display name
-    country: "Japan",                              // country label
-    continent: "Asia",                             // used by continent filter
-    image: "assets/images/Kyoto.webp",                                     // intentionally empty
+    id: "kyoto",                                   
+    name: "Kyoto",                                 
+    country: "Japan",                              
+    continent: "Asia",                             
+    image: "assets/images/Kyoto.webp",                                     
     description:
       "Japan's former imperial capital, Kyoto blends serene temples, " +
       "traditional tea houses and quiet bamboo groves with a calm, " +
       "unhurried pace that makes it perfect for slow travel.",
-    attractions: [                                 // list shown in the modal
+    attractions: [                                 
       "Fushimi Inari shrine and its torii gates",
       "Arashiyama bamboo grove",
       "Kinkaku-ji (the Golden Pavilion)",
       "Gion historic geisha district"
     ],
-    travelTypes: ["cultural", "relaxation"],       // generator tags
-    budgetTier: "medium",                          // generator budget filter
-    costs: { budget: 18000, mid: 39000, luxury: 90000 }   // daily LKR estimates
+    travelTypes: ["cultural", "relaxation"],       
+    budgetTier: "medium",                          
+    costs: { budget: 18000, mid: 39000, luxury: 90000 }   
   },
   {
     id: "santorini",
